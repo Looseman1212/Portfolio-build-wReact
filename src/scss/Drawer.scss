@@ -1,54 +1,40 @@
-.drawer-container {
-  --transition-speed: 0.3s;
-}
-
-.drawer {
-  background: #fff;
-  width: 30%;
-  height: 100%;
-	overflow: auto;
-  position: fixed;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  transition: transform var(--transition-speed) ease;
-  z-index: 1000;
-}
-
-.drawer.left {
-  top: 0;
-  left: 0;
-  transform: translateX(-100%);
-}
-
-.drawer-container.open .left {
-  transform: translateX(0);
-}
-
-.backdrop {
-  visibility: hidden;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
-  transition: opacity var(--transition-speed) ease,
-    visibility var(--transition-speed) ease;
+.drawers-box {
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  pointer-events: none;
-	z-index: 0;
-}
-
-/*
-	Only apply the box-shadow when open to prevent the shadow
-  from appearing on the edge of the screen when inactive
- */
-.drawer-container.open .drawer {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.drawer-container.open .backdrop {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-	z-index: 999;
+  height: 69px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  // overflow: hidden;
+  .Skills-button-content-container {
+    background-color: yellow;
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    .Skills-btn {
+      height: 70px;
+      width: 100%;
+    }
+  }
+  .SkillsPullup-isOpen {
+    transform: translateY(-300px);
+  }
+  .Exp-button-content-container {
+    background-color: pink;
+    width: 50%;
+    height: fit-content;
+    position: relative;
+    z-index: 3;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(0);
+    .Exp-btn {
+      height: 70px;
+      width: 100%;
+    }
+  }
+  .ExpPullup-isOpen {
+    transform: translateY(-300px);
+  }
 }

@@ -1,26 +1,19 @@
 // import Landing from "./Components/Landing";
 // import Experiences from "./Components/Experiences";
-import Drawer from "./Components/Drawer";
-import { useState } from "react";
+import Drawers from "./Components/Drawers";
+
+// import { useState } from "react";
+import "./scss/App.scss";
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       {/* <Landing />
       <Experiences /> */}
-      <div className="app">
-        <button type="button" onClick={() => setIsOpen(!isOpen)}>
-          Trigger Drawer
-        </button>
-        <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-          <button type="button" onClick={() => setIsOpen(false)}>
-            Close
-          </button>
-          <p>The drawer content!</p>
-          <input type="text" />
-        </Drawer>
+      <div className="drawer-testing">
+        <div className="app-testing-above"></div>
+        <Drawers />
+        <div className="app-testing-below"></div>
       </div>
     </>
   );
