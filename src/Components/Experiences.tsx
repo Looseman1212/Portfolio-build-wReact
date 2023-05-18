@@ -20,7 +20,7 @@ const Experiences = () => {
           <p>
             While doing this I learned about the power of the web, its ability
             to solve problems for businesses, and create effective experiences
-            for users. I decided to pursue my interest for developing software,
+            for users. I decided to pursue my interest in developing software,
             and have completed accredited studies in Full Stack Development,
             gaining hands-on experience building web applications both solo, and
             as part of different teams on multiple group projects. I'm destined
