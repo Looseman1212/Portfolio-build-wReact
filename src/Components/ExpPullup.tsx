@@ -17,7 +17,7 @@ function DrawerContents() {
         With some friends from school, we built some simple e-commerce ideas,
         and applied our skills to develop Melbourne Park Finder. This site used
         a government managed API and parking sensors to deliver a map to the
-        user with available and unavailable carpark spaces in the CBD. I worked
+        user with available and unavailable car park spaces in the CBD. I worked
         heavily on the backend with the API as well as communicating some of the
         data visually on the front end.
       </p>
