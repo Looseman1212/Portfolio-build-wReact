@@ -13,30 +13,22 @@ function Drawers() {
         className={`Skills-button-content-container ${
           isSkillsOpen && "SkillsPullup-isOpen"
         }`}
+        onClick={() => {
+          setSkillsOpen(!isSkillsOpen);
+        }}
       >
-        <div
-          className="Skills-btn"
-          onClick={() => {
-            setSkillsOpen(!isSkillsOpen);
-          }}
-        >
-          Click 4 skillz
-        </div>
+        <div className="Skills-btn">Technical Skills</div>
         <SkillsPullup />
       </div>
       <div
         className={`Exp-button-content-container ${
           isExpOpen && "ExpPullup-isOpen"
         }`}
+        onClick={() => {
+          setExpOpen(!isExpOpen);
+        }}
       >
-        <div
-          className="Exp-btn"
-          onClick={() => {
-            setExpOpen(!isExpOpen);
-          }}
-        >
-          Click 4 experience
-        </div>
+        <div className="Exp-btn">Development Experience</div>
         <ExpPullup />
       </div>
     </div>
