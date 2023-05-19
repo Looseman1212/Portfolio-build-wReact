@@ -49,6 +49,10 @@ function Projects() {
     });
   };
 
+  const stopPropagation = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.stopPropagation();
+  };
+
   return (
     <div className="projects-container" onClick={returnSVG}>
       <div className="tiles-svg-desc-box">
@@ -188,6 +192,7 @@ function Projects() {
               href="https://scrapelist-web-app.herokuapp.com/"
               target="_blank"
               className="desc-btn"
+              onClick={stopPropagation}
             >
               Visit Scrapelist
             </a>
@@ -216,13 +221,15 @@ function Projects() {
                 href="https://melbourne-park-finder.herokuapp.com/"
                 target="_blank"
                 className="desc-btn"
+                onClick={stopPropagation}
               >
                 Visit Melbourne Park Finder
               </a>
               <a
-                href="https://youtube.com/"
+                href="https://youtu.be/s-Lc72NtpFg?t=1128"
                 target="_blank"
                 className="desc-btn"
+                onClick={stopPropagation}
               >
                 Watch the presentation
               </a>
@@ -242,8 +249,9 @@ function Projects() {
               href="https://newtel.com.au/"
               target="_blank"
               className="desc-btn"
+              onClick={stopPropagation}
             >
-              See the NewTel website here
+              Vist the NewTel website
             </a>
           </div>
           <div className="project-desc miscellaneous-desc hidden">
@@ -261,6 +269,7 @@ function Projects() {
               href="https://github.com/Looseman1212?tab=repositories"
               target="_blank"
               className="desc-btn"
+              onClick={stopPropagation}
             >
               Visit my Repos here
             </a>

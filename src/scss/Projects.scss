@@ -2,6 +2,7 @@
   background-color: #1C5E9B;
   width: 100%;
   height: 870px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
   position: relative;
   z-index: 5;
   display: flex;
@@ -32,16 +33,21 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
         .project-tile {
-          background-color: black;
+          // background-color: black;
           width: 100%;
           height: 100px;
           border-radius: 12px;
           margin-bottom: 30px;
+          cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center;
           font-family: 'Lato', sans-serif;
           font-size: 2em;
+          transition: 0.3s ease;
+          &:hover {
+            font-size: 2.3em;
+          }
         }
         #scrapelist-tile {
           background: linear-gradient(273deg, rgba(230, 170, 206, 0.5), rgba(230, 170, 206, 0.1)), url('../assets/scrapelist-tile-bgimage.jpg');
@@ -59,6 +65,9 @@
           background-size: 100%;
           // background-position: 0px 202px;
           background-position: center center;
+          &:hover {
+            background-size: 120%;
+          }
         }
         #miscellaneous-tile {
           background: url('../assets/github-tile-bgimage.png');
@@ -128,18 +137,18 @@
           }
         }
       }
-      .scrapelist-desc {
-        // background-color: red;
-      }
-      .mpf-desc {
-        // background-color: green;
-      }
-      .newtel-desc {
-        // background-color: white;
-      }
-      .miscellaneous-desc {
-        // background-color: brown;
-      }
+      // .scrapelist-desc {
+      //   // background-color: red;
+      // }
+      // .mpf-desc {
+      //   // background-color: green;
+      // }
+      // .newtel-desc {
+      //   // background-color: white;
+      // }
+      // .miscellaneous-desc {
+      //   // background-color: brown;
+      // }
     }
   }
 }
