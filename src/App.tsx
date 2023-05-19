@@ -4,6 +4,7 @@ import Drawers from "./Components/Drawers";
 
 // import { useState } from "react";
 import "./scss/App.scss";
+import Projects from "./Components/Projects";
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <Landing />
       <Experiences />
       <Drawers />
-      <div className="app-testing-below"></div>
+      <Projects />
       {/* <div className="drawer-testing">
         <div className="app-testing-above"></div>
+        <div className="app-testing-below"></div>
       </div> */}
     </>
   );

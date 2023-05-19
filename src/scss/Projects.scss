@@ -1,0 +1,174 @@
+.projects-container {
+  background-color: #1C5E9B;
+  width: 100%;
+  height: 870px;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .tiles-svg-desc-box {
+    // background-color: red;
+    width: 73%;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .tiles-side {
+      // background-color: gold;
+      width: 48%;
+      height: 100%;
+      padding: 30px;
+      text-align: center;
+      color: white;
+      h1 {
+        font-size: 1.8em;
+      }
+      .tiles-box {
+        height: 450px;
+        margin-top: 30px;
+        overflow: scroll;
+        // hide scrollbar for IE, edge, Firefox
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        .project-tile {
+          background-color: black;
+          width: 100%;
+          height: 100px;
+          border-radius: 12px;
+          margin-bottom: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Lato', sans-serif;
+          font-size: 2em;
+        }
+        #scrapelist-tile {
+          background: linear-gradient(273deg, rgba(230, 170, 206, 0.5), rgba(230, 170, 206, 0.1)), url('../assets/scrapelist-tile-bgimage.jpg');
+          background-size: 120%;
+          background-position: center center;
+        }
+        #mpf-tile {
+          background: linear-gradient(102deg, rgba(80, 187, 214, 0.551), rgba(230, 170, 206, 0.1)), url('../assets/mpf-tile-bgimage.png');
+          background-size: 120%;
+          // background-position: 0px 383px;
+          background-position: center center;
+        }
+        #newtel-tile {
+          background: url('../assets/newtel-tile-bgimage.jpg');
+          background-size: 100%;
+          // background-position: 0px 202px;
+          background-position: center center;
+        }
+        #miscellaneous-tile {
+          background: url('../assets/github-tile-bgimage.png');
+          background-size: 100%;
+          // background-position: 0px 223px;
+          background-position: center center;
+        }
+      }
+    }
+    .svg-side {
+      // background-color: pink;
+      width: 48%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .svg-box {
+        width: 100%;
+        height: fit-content;
+        #screen-background {
+          animation: fadeIn 2s;
+          animation-fill-mode: both;
+        }
+        #codeblock1 {
+          animation: fadeInUp 1s ease both;
+          animation-delay: 1s;
+        }
+        #codeblock2 {
+          animation: fadeInUp 1s ease both;
+          animation-delay: 1.25s;
+        }
+        #codeblock3 {
+          animation: fadeInUp 1s ease both;
+          animation-delay: 1.5s;
+        }
+        #codeblock4 {
+          animation: fadeInUp 1s ease both;
+          animation-delay: 1.75s;
+        }
+      }
+      .project-desc {
+        width: 100%;
+        height: fit-content;
+        color: white;
+        font-family: 'Ibarra Real Nova', serif;
+        font-weight: 400;
+        font-size: 1.12em;
+        .desc-buttons-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin-top: 1.8em;
+        }
+        .desc-btn {
+          background-color: #56cbf9;
+          color: black;
+          border-radius: 10px;
+          padding: 20px;
+          display: block;
+          width: fit-content;
+          margin: auto;
+          text-decoration: none;
+          transition: 0.2s ease;
+          &:hover {
+            background-color: #26BCF7;
+            color: white;
+          }
+        }
+      }
+      .scrapelist-desc {
+        // background-color: red;
+      }
+      .mpf-desc {
+        // background-color: green;
+      }
+      .newtel-desc {
+        // background-color: white;
+      }
+      .miscellaneous-desc {
+        // background-color: brown;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// hide tiles-box scrollbar for chrome, safari, opera
+.tiles-box::-webkit-scrollbar {
+  display: none;
+}
