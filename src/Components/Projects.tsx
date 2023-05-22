@@ -275,7 +275,7 @@ function Projects() {
             </div>
           </div>
           <div className="project-desc newtel-desc hidden">
-            I helped manage some documentation for NewTel's landing page, NewTel
+            I helped write some documentation for NewTel's landing page, NewTel
             is a startup telecommunications business thats growing its network
             in Newcastle Australia.
             <br />
@@ -294,8 +294,8 @@ function Projects() {
             </a>
           </div>
           <div className="project-desc miscellaneous-desc hidden">
-            On my Github page is the source code for some of my small scale
-            projects that I have been doing to learn more and grow my skillset.
+            On my Github page is the source code for some small scale projects
+            that I have been doing to learn more and grow my skillset.
             <br />
             <br />
             Apps include the classics like a calculator, a to-do list, as well
