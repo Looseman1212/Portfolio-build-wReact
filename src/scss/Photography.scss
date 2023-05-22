@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.photography-container {
+  // background-color: red;
+  width: 100%;
+  height: 900px;
+  .heading-svg-container {
+    // background-color: aqua;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .svg-box {
+      // background-color: firebrick;
+      width: 420px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .heading-box {
+      // background-color: palevioletred;
+      width: 420px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .pictures-scroller {
+    // background-color: red;
+    position: relative;
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    .images-box {
+      // overflow: hidden;
+      height: 100%;
+      white-space: nowrap;
+      animation: scrollText 2s infinite linear;
+      margin: 0;
+      font-size: 0;
+      display: flex;
+      justify-content: space-between;
+      width: fit-content;
+      .carousel-image {
+        display: inline-block;
+        margin: 0;
+        padding-left: 20px;
+        color: white;
+      }
+    }
+  }
+}
+
+// carousel animation
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// @keyframes scrollCarousel {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-3000px)
+//   }
+// }
+
+// camera svg settings
+#flash-center {
+  fill: #FEEA00;
+}
+.flash-external {
+  fill: #FFF15C;
+}
+#Camera {
+  animation: fadeInLeft 2s;
+}
+#flash-center, .flash-external {
+  transition: all 0.5s ease;
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#Flash {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  animation-delay: 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
