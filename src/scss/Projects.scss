@@ -87,23 +87,23 @@
       .svg-box {
         width: 100%;
         height: fit-content;
-        #screen-background {
+        .screen-monitor-animation {
           animation: fadeIn 2s;
           animation-fill-mode: both;
         }
-        #codeblock1 {
+        .codeblock1-animation {
           animation: fadeInUp 1s ease both;
           animation-delay: 1s;
         }
-        #codeblock2 {
+        .codeblock2-animation {
           animation: fadeInUp 1s ease both;
           animation-delay: 1.25s;
         }
-        #codeblock3 {
+        .codeblock3-animation {
           animation: fadeInUp 1s ease both;
           animation-delay: 1.5s;
         }
-        #codeblock4 {
+        .codeblock4-animation {
           animation: fadeInUp 1s ease both;
           animation-delay: 1.75s;
         }
@@ -137,18 +137,6 @@
           }
         }
       }
-      // .scrapelist-desc {
-      //   // background-color: red;
-      // }
-      // .mpf-desc {
-      //   // background-color: green;
-      // }
-      // .newtel-desc {
-      //   // background-color: white;
-      // }
-      // .miscellaneous-desc {
-      //   // background-color: brown;
-      // }
     }
   }
 }

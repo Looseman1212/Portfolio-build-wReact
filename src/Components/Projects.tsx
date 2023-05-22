@@ -1,10 +1,32 @@
+import { useEffect, useRef, useState } from "react";
 import "../scss/Projects.scss";
-
-// function showTileDesc(event: MouseEvent) {
-//   console.log(event.target);
-// }
+// import { useInView } from "react-intersection-observer";
 
 function Projects() {
+  // variables for useEffect
+  const screenMonitorRef = useRef<HTMLDivElement | null>(null);
+  const [screenMonitorIsVisible, setScreenMonitorIsVisible] = useState(false);
+  console.log("screenMonitorIsVisible", screenMonitorIsVisible);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setScreenMonitorIsVisible(entry.isIntersecting);
+    });
+
+    const currentScreenRef = screenMonitorRef.current;
+
+    if (currentScreenRef) {
+      observer.observe(currentScreenRef);
+    }
+
+    return () => {
+      if (currentScreenRef) {
+        observer.unobserve(currentScreenRef);
+      }
+    };
+  }, []);
+
   const handleTileClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
@@ -88,7 +110,7 @@ function Projects() {
           </div>
         </div>
         <div className="svg-side">
-          <div className="svg-box">
+          <div className="svg-box" ref={screenMonitorRef}>
             <svg
               width="500"
               height="333.333"
@@ -118,7 +140,12 @@ function Projects() {
                     stroke-width="0.7"
                   />
                 </g>
-                <g id="screen-background">
+                <g
+                  id="screen-background"
+                  className={
+                    screenMonitorIsVisible ? "screen-monitor-animation" : ""
+                  }
+                >
                   <path
                     id="display"
                     d="M257.5 8.5L253.5 141L45.5 128L48 19L257.5 8.5Z"
@@ -148,21 +175,33 @@ function Projects() {
                 <g id="codeblocks-group">
                   <path
                     id="codeblock1"
+                    className={
+                      screenMonitorIsVisible ? "codeblock1-animation" : ""
+                    }
                     d="M81 25.4038C81 23.785 82.2843 22.4581 83.9022 22.4054L169.902 19.601C171.597 19.5458 173 20.9042 173 22.5994V35.0485C173 36.6863 171.686 38.0214 170.049 38.0481L84.0489 39.4503C82.3731 39.4776 81 38.1267 81 36.4507V25.4038Z"
                     fill="#1C5E9B"
                   />
                   <path
                     id="codeblock2"
+                    className={
+                      screenMonitorIsVisible ? "codeblock2-animation" : ""
+                    }
                     d="M81 46.4635C81 44.8283 82.3095 43.4943 83.9445 43.464L131.944 42.5751C133.623 42.544 135 43.896 135 45.5746V56.5736C135 58.2088 133.69 59.5428 132.056 59.573L84.0555 60.4619C82.3772 60.493 81 59.141 81 57.4624V46.4635Z"
                     fill="#1C5E9B"
                   />
                   <path
                     id="codeblock3"
+                    className={
+                      screenMonitorIsVisible ? "codeblock3-animation" : ""
+                    }
                     d="M81 68.9268C81 67.2988 82.2984 65.9679 83.9259 65.9278L158.926 64.0759C160.611 64.0343 162 65.3891 162 67.075V78.555C162 80.1902 160.69 81.5243 159.056 81.5545L84.0555 82.9434C82.3772 82.9745 81 81.6225 81 79.9439V68.9268Z"
                     fill="#1C5E9B"
                   />
                   <path
                     id="codeblock4"
+                    className={
+                      screenMonitorIsVisible ? "codeblock4-animation" : ""
+                    }
                     d="M81 89.945C81 88.3098 82.3095 86.9758 83.9445 86.9455L131.944 86.0566C133.623 86.0255 135 87.3775 135 89.0561V100.055C135 101.69 133.69 103.024 132.056 103.055L84.0555 103.943C82.3772 103.975 81 102.623 81 100.944V89.945Z"
                     fill="#1C5E9B"
                   />
@@ -251,7 +290,7 @@ function Projects() {
               className="desc-btn"
               onClick={stopPropagation}
             >
-              Vist the NewTel website
+              Visit the NewTel website
             </a>
           </div>
           <div className="project-desc miscellaneous-desc hidden">
