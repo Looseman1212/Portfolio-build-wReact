@@ -15,6 +15,9 @@
     transition: all 0.3s ease-in-out;
     transform: translateY(0);
     cursor: pointer;
+    &:hover {
+      transform: translateY(-20px);
+    }
     .Skills-btn {
       height: 70px;
       width: 100%;
@@ -29,6 +32,9 @@
   .SkillsPullup-isOpen {
     transform: translateY(-560px);
     box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+      transform: translateY(-560px);
+    }
   }
   .Exp-button-content-container {
     background-color: #F3FFBD;
@@ -40,6 +46,9 @@
     transition: all 0.3s ease-in-out;
     transform: translateY(0);
     cursor: pointer;
+    &:hover {
+      transform: translateY(-20px);
+    }
     .Exp-btn {
       height: 70px;
       width: 100%;
@@ -54,5 +63,8 @@
   .ExpPullup-isOpen {
     transform: translateY(-560px);
     box-shadow: -2px 2px 7px 3px rgba(0, 0, 0, 0.2);
+    &:hover {
+      transform: translateY(-560px);
+    }
   }
 }

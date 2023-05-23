@@ -26,7 +26,14 @@ p {
 }
 
 .blue-wrapper {
-  background-color: #1C5D99;
+  // background-color: #1C5D99;
+  background: #4b6cb7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
   width: 100%;
   height: 835px;
   padding-top: 170px;
@@ -117,6 +124,7 @@ p {
     height: 70px;
     margin: auto;
     margin-bottom: 0;
+
     border-radius: 45px 45px 0 0;
     display: flex;
     align-items: center;
@@ -124,31 +132,44 @@ p {
     text-align: center;
     padding: 0 70px;
     animation: riseFromBottom 2s;
-    .navbar-component {
-      animation-name: hideToolbarComps;
-      animation-duration: 1s;
-      animation-delay: 2s;
-      animation-fill-mode: forwards;
-      opacity: 0;
-    }
-    .navbar-btn {
-      height: 100%;
+    .nav-button-box {
+      width: 940px;
+      margin: auto;
       display: flex;
       align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      &:hover {
-        background-color: green;
+      justify-content: space-around;
+      // transition: 3s;
+      .navbar-component {
+        animation-name: hideToolbarComps;
+        animation-duration: 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+      .navbar-btn {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+          background-color: green;
+        }
       }
     }
   }
   #navbar-sticky {
-    // background-color: #00A323;
     outline: 1px solid black;
+    width: 100%;
     position: fixed;
     top: 0;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 0 0;
     z-index: 10;
+    box-shadow: 11px -7px 20px 0px;
+    .nav-button-box {
+      width: 940px;
+      padding: 0 70px;
+    }
   }
 }
 

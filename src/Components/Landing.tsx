@@ -9,7 +9,7 @@ function Landing() {
   const [navbarSticky, setNavbarSticky] = React.useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 835) {
+      if (window.scrollY > 768) {
         setNavbarSticky(true);
       } else {
         setNavbarSticky(false);
@@ -1976,18 +1976,16 @@ function Landing() {
             </p>
           </div>
         </div>
-        <div
-          className="bottom-navbar"
-          id={navbarSticky ? "navbar-sticky" : ""}
-          // ref={navbar}
-        >
-          <h6 className="navbar-component navbar-btn">Skills & Experience</h6>
-          <h6 className="navbar-component">&#8212;</h6>
-          <h6 className="navbar-component navbar-btn">Projects</h6>
-          <h6 className="navbar-component">&#8212;</h6>
-          <h6 className="navbar-component navbar-btn">Photography</h6>
-          <h6 className="navbar-component">&#8212;</h6>
-          <h6 className="navbar-component navbar-btn">More Me</h6>
+        <div className="bottom-navbar" id={navbarSticky ? "navbar-sticky" : ""}>
+          <section className="nav-button-box">
+            <h6 className="navbar-component navbar-btn">Skills & Experience</h6>
+            <h6 className="navbar-component">&#8212;</h6>
+            <h6 className="navbar-component navbar-btn">Projects</h6>
+            <h6 className="navbar-component">&#8212;</h6>
+            <h6 className="navbar-component navbar-btn">Photography</h6>
+            <h6 className="navbar-component">&#8212;</h6>
+            <h6 className="navbar-component navbar-btn">More Me</h6>
+          </section>
         </div>
       </div>
     </>
