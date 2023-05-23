@@ -6,7 +6,7 @@ function Projects() {
   // variables for useEffect
   const screenMonitorRef = useRef<HTMLDivElement | null>(null);
   const [screenMonitorIsVisible, setScreenMonitorIsVisible] = useState(false);
-  console.log("screenMonitorIsVisible", screenMonitorIsVisible);
+  // console.log("screenMonitorIsVisible", screenMonitorIsVisible);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
