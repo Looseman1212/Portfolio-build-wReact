@@ -111,7 +111,7 @@ p {
       }
     }
   }
-  .bottom-toolbar {
+  .bottom-navbar {
     background-color: white;
     width: 940px;
     height: 70px;
@@ -124,14 +124,14 @@ p {
     text-align: center;
     padding: 0 70px;
     animation: riseFromBottom 2s;
-    .toolbar-component {
+    .navbar-component {
       animation-name: hideToolbarComps;
       animation-duration: 1s;
       animation-delay: 2s;
       animation-fill-mode: forwards;
       opacity: 0;
     }
-    .toolbar-btn {
+    .navbar-btn {
       height: 100%;
       display: flex;
       align-items: center;
@@ -141,6 +141,14 @@ p {
         background-color: green;
       }
     }
+  }
+  #navbar-sticky {
+    // background-color: #00A323;
+    outline: 1px solid black;
+    position: fixed;
+    top: 0;
+    border-radius: 0 0 25px 25px;
+    z-index: 10;
   }
 }
 

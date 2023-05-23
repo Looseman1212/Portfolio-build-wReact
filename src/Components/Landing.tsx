@@ -1,8 +1,22 @@
 import "../scss/Landing.scss";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
 function Landing() {
+  // const navbar = useRef(null);
+  // console.log(navbar);
+
+  const [navbarSticky, setNavbarSticky] = React.useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 835) {
+        setNavbarSticky(true);
+      } else {
+        setNavbarSticky(false);
+      }
+    });
+  }, []);
+
   const typedEl = React.useRef(null);
 
   React.useEffect(() => {
@@ -1962,14 +1976,18 @@ function Landing() {
             </p>
           </div>
         </div>
-        <div className="bottom-toolbar">
-          <h6 className="toolbar-component toolbar-btn">Skills & Experience</h6>
-          <h6 className="toolbar-component">&#8212;</h6>
-          <h6 className="toolbar-component toolbar-btn">Projects</h6>
-          <h6 className="toolbar-component">&#8212;</h6>
-          <h6 className="toolbar-component toolbar-btn">Photography</h6>
-          <h6 className="toolbar-component">&#8212;</h6>
-          <h6 className="toolbar-component toolbar-btn">More Me</h6>
+        <div
+          className="bottom-navbar"
+          id={navbarSticky ? "navbar-sticky" : ""}
+          // ref={navbar}
+        >
+          <h6 className="navbar-component navbar-btn">Skills & Experience</h6>
+          <h6 className="navbar-component">&#8212;</h6>
+          <h6 className="navbar-component navbar-btn">Projects</h6>
+          <h6 className="navbar-component">&#8212;</h6>
+          <h6 className="navbar-component navbar-btn">Photography</h6>
+          <h6 className="navbar-component">&#8212;</h6>
+          <h6 className="navbar-component navbar-btn">More Me</h6>
         </div>
       </div>
     </>
