@@ -1,5 +1,42 @@
-.moreme {
-  background-color: red;
+.moreme-container {
+  background-color: black;
   width: 100%;
-  height: 800px;
+  height: 900px;
+  .moreme-red-area {
+    width: 100%;
+    height: 80%;
+    background-color: #D62246;
+    border-radius: 0px 0px 40px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .moreme-text-links-box {
+      // background-color: yellow;
+      height: 60%;
+      width: 60%;
+      .moreme-text {
+        margin-top: 50px;
+        text-align: center;
+        height: fit-content;
+      }
+      .moreme-links {
+        // background-color: white;
+        width: 100%;
+        height: 70px;
+        margin-top: 50px;
+        padding: 0px 180px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        .moreme-svg {
+          height: 70px;
+          transition: 0.5s;
+          &:hover {
+            fill: #ffffff;
+          }
+        }
+      }
+    }
+  }
 }
