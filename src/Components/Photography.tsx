@@ -44,6 +44,9 @@ function Photography() {
         <div className="heading-box">
           <h1>Photography</h1>
           <p>Here are some photographs of mine, all taken on 35mm film</p>
+          <p className="carousel-instruction">
+            Hover mouse over to stop the scrolling :)
+          </p>
         </div>
       </div>
       <div className="carousel-container" ref={carouselRef}>
@@ -82,9 +85,6 @@ function Photography() {
           <img src={horizontal7} alt="fff" className="carousel-image" />
         </div>
       </div>
-      <p className="carousel-instruction">
-        Hover mouse over to stop the scrolling :)
-      </p>
     </div>
   );
 }
