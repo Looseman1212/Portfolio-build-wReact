@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import "../scss/Projects.scss";
-// import { useInView } from "react-intersection-observer";
 
-function Projects() {
+interface Props {
+  id: string;
+}
+
+function Projects({ id }: Props) {
   // variables for useEffect
   const screenMonitorRef = useRef<HTMLDivElement | null>(null);
   const [screenMonitorIsVisible, setScreenMonitorIsVisible] = useState(false);
@@ -76,7 +79,7 @@ function Projects() {
   };
 
   return (
-    <div className="projects-container" onClick={returnSVG}>
+    <div className="projects-container" onClick={returnSVG} id={id}>
       <div className="tiles-svg-desc-box">
         <div className="tiles-side">
           <h1>Projects I've worked on:</h1>

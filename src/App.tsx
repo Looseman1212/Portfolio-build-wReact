@@ -4,7 +4,6 @@ import Drawers from "./Components/Drawers";
 import Photography from "./Components/Photography";
 import Moreme from "./Components/Moreme";
 
-// import { useState } from "react";
 import "./scss/App.scss";
 import Projects from "./Components/Projects";
 
@@ -12,15 +11,11 @@ function App() {
   return (
     <>
       <Landing />
-      <Experiences />
+      <Experiences id="experiences" />
       <Drawers />
-      <Projects />
-      <Photography />
-      <Moreme />
-      {/* <div className="drawer-testing">
-        <div className="app-testing-above"></div>
-        <div className="app-testing-below"></div>
-      </div> */}
+      <Projects id="projects" />
+      <Photography id="photography" />
+      <Moreme id="moreme" />
     </>
   );
 }

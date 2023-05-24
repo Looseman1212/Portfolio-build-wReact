@@ -1,8 +1,12 @@
 import "../scss/Moreme.scss";
 
-function Moreme() {
+interface Props {
+  id: string;
+}
+
+function Moreme({ id }: Props) {
   return (
-    <div className="moreme-container">
+    <div className="moreme-container" id={id}>
       <div className="moreme-red-area">
         <div className="moreme-text-links-box">
           <div className="moreme-text">
