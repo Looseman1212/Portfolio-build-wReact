@@ -1,9 +1,13 @@
 import "../scss/Experiences.scss";
 import myavatar from "../assets/me_avatar.jpeg";
 
-const Experiences = () => {
+interface Props {
+  id: string;
+}
+
+const Experiences = ({ id }: Props) => {
   return (
-    <div className="experiences-wrapper">
+    <div id={id} className="experiences-wrapper">
       <div className="heading-box">
         <h1>Where I started</h1>
       </div>

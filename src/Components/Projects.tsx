@@ -1,8 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import "../scss/Projects.scss";
-// import { useInView } from "react-intersection-observer";
 
-function Projects() {
+interface Props {
+  id: string;
+}
+
+function Projects({ id }: Props) {
   // variables for useEffect
   const screenMonitorRef = useRef<HTMLDivElement | null>(null);
   const [screenMonitorIsVisible, setScreenMonitorIsVisible] = useState(false);
@@ -76,7 +79,7 @@ function Projects() {
   };
 
   return (
-    <div className="projects-container" onClick={returnSVG}>
+    <div className="projects-container" onClick={returnSVG} id={id}>
       <div className="tiles-svg-desc-box">
         <div className="tiles-side">
           <h1>Projects I've worked on:</h1>
@@ -210,16 +213,16 @@ function Projects() {
             </svg>
           </div>
           <div className="project-desc scrapelist-desc hidden">
-            Scrapelist is an app I developed with the aim of bridging the gap
-            between two popular music platforms, Bandcamp and Spotify. The
-            intention of the app was to combine the exposure of unknown artists
-            from Bandcamp with the convenience and extensive library of Spotify.
+            Scrapelist is an app I developed to bridge the gap between two
+            popular music platforms, Bandcamp and Spotify. The intention was to
+            combine the exposure of unknown artists from Bandcamp with the
+            convenience and extensive library of Spotify.
             <br />
             <br />
             Through this project, I gained valuable experience in effective
             UX/UI design, and learnt about what a seamless and intuitive user
-            experience is. The tricky part about that was error management and
-            handling, and ensuring the app's stability and reliability.
+            experience is. The tricky part was error management and handling,
+            and ensuring the app's stability and reliability.
             <br />
             <br />I worked on implementing high-quality data scraping techniques
             to gather and present accurate music information, and integrated
@@ -227,14 +230,29 @@ function Projects() {
             experience and expanded the app's capabilities.
             <br />
             <br />
-            <a
-              href="https://scrapelist-web-app.herokuapp.com/"
-              target="_blank"
-              className="desc-btn"
-              onClick={stopPropagation}
-            >
-              Visit Scrapelist
-            </a>
+            As it stands now, only registered Spotify accounts can use the
+            platform, so if you wish to use the app yourself please reach out to
+            me and I can get your account registered!
+            <br />
+            <br />
+            <div className="desc-buttons-box">
+              <a
+                href="https://youtu.be/RLuMJm2zTOE"
+                target="_blank"
+                className="desc-btn"
+                onClick={stopPropagation}
+              >
+                Watch a demo of the app
+              </a>
+              <a
+                href="https://scrapelist-web-app.herokuapp.com/"
+                target="_blank"
+                className="desc-btn"
+                onClick={stopPropagation}
+              >
+                Visit Scrapelist
+              </a>
+            </div>
           </div>
           <div className="project-desc mpf-desc hidden">
             As part of a group, I had the opportunity to develop a Progressive

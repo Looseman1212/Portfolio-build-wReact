@@ -1,13 +1,30 @@
 import "../scss/Landing.scss";
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 
 function Landing() {
-  const typedEl = React.useRef(null);
+  const [navbarSticky, setNavbarSticky] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 768) {
+        setNavbarSticky(true);
+      } else {
+        setNavbarSticky(false);
+      }
+    });
+  }, []);
 
-  React.useEffect(() => {
+  const typedEl = useRef(null);
+  useEffect(() => {
     const typed = new Typed(typedEl.current, {
-      strings: ["Hello world!", ":)", "Welcome", "x = x + 1 LOL"],
+      strings: [
+        "Hello world!",
+        ":)",
+        "Welcome",
+        "x = x + 1",
+        "Built w React",
+        "@yeahsickg",
+      ],
       typeSpeed: 100,
       startDelay: 2300,
       loop: true,
@@ -22,6 +39,18 @@ function Landing() {
       typed.destroy();
     };
   }, []);
+
+  const handleNavBtnClick = (event: React.MouseEvent<HTMLHeadingElement>) => {
+    event.preventDefault();
+
+    const targetId = event.currentTarget.getAttribute("id");
+    if (targetId) {
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <>
@@ -1962,14 +1991,40 @@ function Landing() {
             </p>
           </div>
         </div>
-        <div className="bottom-toolbar">
-          <h6 className="toolbar-component toolbar-btn">Skills & Experience</h6>
-          <h6 className="toolbar-component">&#8212;</h6>
-          <h6 className="toolbar-component toolbar-btn">Projects</h6>
-          <h6 className="toolbar-component">&#8212;</h6>
-          <h6 className="toolbar-component toolbar-btn">Photography</h6>
-          <h6 className="toolbar-component">&#8212;</h6>
-          <h6 className="toolbar-component toolbar-btn">More Me</h6>
+        <div className="bottom-navbar" id={navbarSticky ? "navbar-sticky" : ""}>
+          <section className="nav-button-box">
+            <h6
+              className="navbar-component navbar-btn"
+              id="#experiences"
+              onClick={handleNavBtnClick}
+            >
+              Skills & Experience
+            </h6>
+            <h6 className="navbar-component">&#8212;</h6>
+            <h6
+              className="navbar-component navbar-btn"
+              id="#projects"
+              onClick={handleNavBtnClick}
+            >
+              Projects
+            </h6>
+            <h6 className="navbar-component">&#8212;</h6>
+            <h6
+              className="navbar-component navbar-btn"
+              id="#photography"
+              onClick={handleNavBtnClick}
+            >
+              Photography
+            </h6>
+            <h6 className="navbar-component">&#8212;</h6>
+            <h6
+              className="navbar-component navbar-btn"
+              id="#moreme"
+              onClick={handleNavBtnClick}
+            >
+              More Me
+            </h6>
+          </section>
         </div>
       </div>
     </>

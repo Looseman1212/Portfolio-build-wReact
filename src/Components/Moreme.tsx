@@ -1,21 +1,26 @@
 import "../scss/Moreme.scss";
 
-function Moreme() {
+interface Props {
+  id: string;
+}
+
+function Moreme({ id }: Props) {
   return (
-    <div className="moreme-container">
+    <div className="moreme-container" id={id}>
       <div className="moreme-red-area">
         <div className="moreme-text-links-box">
           <div className="moreme-text">
             <h1>
               Thank you for visiting my online portfolio! Don’t hesitate to
-              reach out to me at maxwilliamreid@gmail.com
+              reach out to me at <br />
+              maxwilliamreid@gmail.com
             </h1>
             <br />
             <br />
             <h1>
               Also check out my Github to see what code i’m interested in, my
               Linked in to see who I know, and my instagram to see more
-              photography 😊
+              photography
             </h1>
           </div>
           <div className="moreme-links">

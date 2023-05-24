@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 
+interface Props {
+  id: string;
+}
+
 import "../scss/Photography.scss";
 import vertical1 from "../assets/photography-images/vertical1.jpg";
 import vertical2 from "../assets/photography-images/vertical2.jpg";
@@ -16,7 +20,7 @@ import horizontal5 from "../assets/photography-images/horizontal5.jpg";
 import horizontal6 from "../assets/photography-images/horizontal6.jpg";
 import horizontal7 from "../assets/photography-images/horizontal7.jpg";
 
-function Photography() {
+function Photography({ id }: Props) {
   const [carouselIsVisible, setCarouselIsVisible] = useState(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
@@ -39,7 +43,7 @@ function Photography() {
   }, [carouselIsVisible]);
 
   return (
-    <div className="photography-container">
+    <div className="photography-container" id={id}>
       <div className="heading-container">
         <div className="heading-box">
           <h1>Photography</h1>
