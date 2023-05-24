@@ -4,31 +4,28 @@ function DrawerContents() {
   return (
     <div className="exp-drawer-contents-container">
       <p>
-        After self-learning Python and Ruby for months to see if coding was
-        right for me, I signed up to a Le Wagon bootcamp. I found it to be a
-        great experience, helping me solidify an understanding of foundational
-        coding concepts like Object Oriented Programming, Model View Controller,
-        and exposed me to programming in a full stack context.
+        In 2022, after self-learning Python and Ruby for months to see if coding
+        was right for me, I signed up to a Le Wagon bootcamp. I found it to be a
+        great experience, helping me understand fundamental coding concepts like
+        Object Oriented Programming and Model View Controller, exposing me to
+        programming in a full stack context.
       </p>
       <br />
       <p>
         With JS, HTML, and CSS for the front end, Ruby on Rails as a back end,
-        and PostgreSQL for a DB, I worked on my first few full stack projects.
-        With some friends from school, we built some simple e-commerce ideas,
-        and applied our skills to develop Melbourne Park Finder. This site used
-        a government managed API and parking sensors to deliver a map to the
-        user with available and unavailable car park spaces in the CBD. I worked
-        heavily on the backend with the API as well as communicating some of the
-        data visually on the front end.
+        and PostgreSQL for a DB, I worked on my first few full stack projects
+        with some friends from the course. We built some simple e-commerce
+        ideas, and applied our skills to develop a full stack progressive web
+        application called Melbourne Park Finder. I worked heavily on the
+        backend managing the API, as well as figuring out how to best
+        communicate the data visually on the front end.
       </p>
       <br />
       <p>
-        After this I undertook a personal project called Scrapelist. An app for
-        discovering new music, this project taught me about how to effectively
-        take in information from the user, learn how to read documentation to
-        use an established API effectively, and how to handle error management.
-        I used JS, HTML and SCSS for the front end, RoR for back end and
-        PostgreSQL as a DB.
+        After graduating, I undertook my first solo project called Scrapelist.
+        An app for discovering new music, this project taught me about how to
+        effectively take in information from the user, how to read documentation
+        in more depth, and how to handle error management.
       </p>
       <br />
       <p>

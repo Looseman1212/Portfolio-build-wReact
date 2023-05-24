@@ -17,7 +17,14 @@ function Landing() {
   const typedEl = useRef(null);
   useEffect(() => {
     const typed = new Typed(typedEl.current, {
-      strings: ["Hello world!", ":)", "Welcome", "x = x + 1 LOL"],
+      strings: [
+        "Hello world!",
+        ":)",
+        "Welcome",
+        "x = x + 1",
+        "Built w React",
+        "@yeahsickg",
+      ],
       typeSpeed: 100,
       startDelay: 2300,
       loop: true,
